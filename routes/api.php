@@ -23,5 +23,5 @@ Route::middleware(['guest'])->group(function () {
 });
 
 Route::group(['prefix' => 'v1', 'middleware' => ['auth:sanctum']], function() {
-    Route::get('/users', [UserController::class, 'index']); // get a list of users
+    Route::post('/logout', [UserController::class, 'logout']); // Logout route
 });
